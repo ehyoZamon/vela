@@ -1,0 +1,668 @@
+body{
+    background-color: rgb(247,247,247);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif, serif;
+    text-align: center;
+    
+}
+
+h1{
+    font-size: 36px;
+    font-family: "Times New Roman",Arial,serif,sans-serif;
+}
+
+h2{
+    font-size: 24px;
+    line-height: 26px;
+}
+
+hr{
+    margin: 2px;
+    padding: 0;
+}
+
+p{
+    font-size: 14px;
+}
+
+.simple_link{
+    color: rgb(39,68,86);
+}
+
+.simple_link:focus{
+    color: rgb(39,68,86);
+}
+
+
+/*Start of Nav Menu CSS Code*/
+.nav{
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    background-color: rgb(20,30,40);
+    overflow: hidden;
+    text-align: center;
+    color: rgb(247,247,247);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.nav nav{
+    width: 1100px;
+    max-width: 100%;
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+.nav_wrapper{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.logo_wrap, .subscribe_wrap{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.subscribe_and_search{
+    text-align: right;
+    width: 100%;
+    position: relative;
+}
+
+.sub_search_container{
+    display: inline-flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 100%;
+}
+
+
+.search_icon, .close_icon, .menu_icon{
+    height: 25px;
+    cursor: pointer;
+}
+
+.close_icon{
+    display: none;
+}
+
+.search_form, .newsletter_form{
+    display: none;
+}
+
+.subscribe_container, .search_container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: row;
+}
+
+.subscribe_wrap{
+    height: auto;
+    border-radius: 3px;
+    padding: 7px;
+    border: 1px solid rgb(247,247,247);
+    cursor: pointer;
+}
+
+.subscribe_icon{
+    height: 22px;
+}
+
+.subscribe_wrap span{
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.m_logo{
+    height: 50px;
+    max-height: 100%;
+}
+
+.nav_menu{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style-type: none;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+}
+
+.nav_menu li{
+    display: block;
+}
+
+.nav_menu a{
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(247,247,247);
+}
+
+.nav_menu a:visited{
+    color: rgb(247,247,247);
+}
+
+.search_query{
+    width: 200px;
+    color: rgb(20,30,40);
+    padding: 10px;
+    font-size: 16px;
+    margin: 0;
+    border-radius: 3px;
+    border: 0;
+}
+
+
+.search_form{
+    background-color: rgb(247,247,247);
+    padding-right: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+nav input[type='text']{
+    border: 0;
+    background-color: rgb(247,247,247);
+}
+
+nav input[type='text']:focus{
+    border-color: rgb(247,247,247);
+    border-style: solid;
+    border-width: 1px;
+    outline: none; 
+}
+
+nav input[type='text']::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(20,30,40);
+    opacity: 0.8;
+}
+
+nav input[type='text']::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(20,30,40);
+    opacity: 0.8;
+}
+
+.search_button{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 7px;
+    margin: 0;
+    right: 12px;
+    background-color: rgb(20,140,150);
+    color: rgb(247,247,247);
+    border: 0;
+    border-radius:3px;
+    cursor: pointer;
+}
+
+.search_button:focus{
+    border: 0;
+}
+
+
+.t_nav_wrapper{
+    display: none;
+}
+/*End of Nav Menu CSS Code*/
+
+/*Start of Footer CSS Code*/
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(20,30,40);
+    text-align: center;
+}
+
+.footer_container{
+    width: 1100px;
+    max-width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.footer_logo_container{
+    display: inline-flex;
+    float: left;
+    height: 100%;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.f_logo{
+    height: 30px;
+}
+
+.copyright_container{
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(247,247,247);
+}
+
+
+.footer_info{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgb(250,240,230);
+    margin: 0;
+}
+
+.footer_info_container{
+    width: 1100px;
+    max-width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: rgb(20,30,40);
+}
+
+
+.footer_info_icons img{
+    width: 25px;
+    margin: 5px;
+}
+
+.newsletter_and_sites{
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 45% 45%;
+    grid-gap: 10%;
+    font-family: Arial, sans-serif, serif;
+    line-height: 22px;
+    text-align: left;
+}
+
+.newsletter_and_sites p{
+    font-size: 16px;
+}
+
+.newsletter_form{
+    background-color: rgb(247,247,247);
+    border: 1px solid rgb(20,140,150);
+    border-radius: 1px;
+    display: inline-grid;
+    width: 450px;
+    max-width: 100%;
+    position: relative;
+    grid-template-columns: 65% 35%;
+}
+
+.newsletter_form input{
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 0;
+    overflow: hidden;
+}
+
+.newsletter_form input:focus{
+    border-color: rgb(247,247,247);
+    border-style: solid;
+    border-width: 1px;
+    outline: none; 
+}
+
+.subscribe_button{
+    background-color: rgb(20,140,150);
+    color: white;
+    font-weight: bold;
+}
+
+.info_sites_nav{
+    list-style-type: none;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+    
+.info_sites_nav li{
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.info_sites_nav a{
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(20,30,40);
+}
+
+.info_sites_nav a:visited{
+    color: rgb(20,30,40);
+}
+
+
+/*End of Footer CSS Code*/
+
+.main{
+    margin-top: 70px;
+    width: 100%;
+    text-align: center;
+    color: rgb(20,30,40);
+}
+
+.main_container{
+    width: 1100px;
+    max-width: 100%;
+    display: inline-block;
+    text-align: left;
+}
+
+.breadcrumbs ul{
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.breadcrumbs ul li{
+    display: inline-block;
+    color: rgb(39,68,86);
+    border-left: 1px solid rgb(39,68,86);
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.breadcrumbs ul li:nth-child(1){
+    border-left: 0;
+}
+
+.breadcrumbs a{
+    color: rgb(39,68,86);
+    text-decoration: none;
+}
+
+.breadcrumbs a:focus{
+    color: rgb(39,68,86);
+}
+
+
+
+@media screen and (max-device-width: 1024px) {
+    /*Start of Nav Menu CSS Code*/
+    .desktop{
+        display: none;
+    }
+    
+    .t_nav_wrapper{
+        display: block;
+        /*grid-template-columns: 100px auto 30%;*/
+        height: 100%;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    
+    .t_logo_wrap, .t_subscribe_body, .t_nav_menu_wrap{
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .t_subscribe_body{
+        float: right;
+    }
+    
+    .t_nav_menu_wrap{
+        float: left;
+    }
+    
+    .t_logo_container{
+        text-align: center;
+    }
+    
+    .t_subscribe_container{
+        text-align: right;
+    }
+    
+    .t_nav_menu_container{
+        text-align: left;
+    }
+    
+    .t_nav_menu_icons{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .t_subscribe_wrap{
+        height: auto;
+        border-radius: 3px;
+        padding: 7px;
+        border: 1px solid rgb(247,247,247);
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+    }
+        
+    .t_subscribe_wrap span{
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    
+    .t_menu_list{
+        position: fixed;
+        background-color: rgba(20,30,40,0.2);
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        z-index: 10;
+    }
+    
+    .t_menu_list_wrap{
+        width: 400px;
+        height: 100%;
+        position: relative;
+        background-color: rgb(250,240,230);
+    }
+    
+    .t_menu_list_container{
+        display: inline-grid;
+        grid-template-rows: 100%;
+        width: 80%;
+        
+    }
+    .t_search_form{
+        width: 80%;
+        display: inline-grid;
+        grid-template-columns: 70% 30%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        background-color: rgb(247,247,247);
+        border-radius: 1px;
+        border: 1px solid rgb(20,140,150);
+    }
+    
+    .search_query{
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .search_button{
+        background-color: rgb(20,140,150);
+        border-radius: 0;
+        border: 0;
+    }
+    
+    .t_nav_menu{
+        list-style-type: none;
+        text-align: left;
+        display: inline-block;
+        width: 80%;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        /*border-top: 1px solid rgb(39,68,86);*/
+    }
+    
+    .t_nav_menu li{
+        display: block;
+        padding-top: 20px;
+        padding-bottom:20px;
+        border-bottom: 1px solid rgb(39,68,86);
+    }
+    
+    .t_nav_menu a{
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        color: rgb(39,68,86);
+    }
+    
+    .t_nav_menu a:visited{
+        color: rgb(39,68,86);
+    }
+    /*End of Nav Menu CSS Code*/
+}
+
+
+@media screen and (max-device-width: 768px) {
+    /*Start of Nav Menu CSS Code*/
+    
+    h1{ 
+        font-size: 32px;
+    }
+    
+    
+    .t_subscribe_wrap span{
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    
+    .t_subscribe_wrap{
+        padding: 4px;
+    }
+    
+    .subscribe_icon{
+        height: 18px;
+    }
+    
+    .nav{
+        height: 50px;
+    }
+    
+    .main{
+        margin-top: 50px;
+    }
+
+    .t_nav_wrapper{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .m_logo{
+        height: 35px;
+        max-height: 100%;
+    }
+    
+    .t_nav_menu_icons{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .t_menu_list{
+        top: 50px;
+    }
+    /*End of Nav Menu CSS Code*/  
+    
+    .newsletter p{
+        font-size: 14px;
+    }
+}
+
+.subscription_form{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    background-color: rgb(20,30,40,0.3);
+}
+
+.subscription_container{
+    width: 100%;
+    text-align: center;
+} 
+
+.subscription_wrap{
+    max-height: 80%;
+    width: 500px;
+    text-align: left;
+    max-width: 70%;
+    display: inline-block;
+    background-color: rgb(247,247,247);
+    padding: 30px;
+    border-radius: 5px;
+    border-left: 20px solid rgb(20,140,150);
+    z-index: 20;
+}
+
+.subscription_wrap h2{
+    font-size: 32px;
+    line-height: 36px;
+} 
+
+.subscription_wrap p{
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.subscription_wrap a{
+    color: rgb(39,68,86);
+}
+
+.subscription_wrap a:focus{
+    color: rgb(39,68,86);
+}
+
+.quit_subscription_form{
+    float: right;
+    width: 20px;
+    cursor: pointer;
+} 
+
+
+@media screen and (max-device-width: 500px) {
+    /*Start of Nav Menu CSS Code*/
+    .t_menu_list_wrap{
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: rgb(250,240,230);
+    }
+    /*End of Nav Menu CSS Code*/
+    
+    
+    .newsletter_and_sites{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-family: Arial, sans-serif, serif;
+    }
+    
+    .newsletter{
+        text-align: center;
+    }
+    
+    
+}

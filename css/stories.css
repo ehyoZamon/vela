@@ -1,0 +1,84 @@
+.stories-ring {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(45deg, #ff9900, #ff0066);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.stories-ring img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid var(--bg);
+  object-fit: cover;
+}
+
+.story-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.story-modal.active {
+  display: flex;
+}
+
+.story-wrapper {
+  position: relative;
+  max-width: 400px;
+  width: 90%;
+}
+
+.progress-container {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: white;
+  transition: width 0.1s linear;
+}
+
+.story-content img {
+  width: 90%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.close-story {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}

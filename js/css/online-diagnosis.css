@@ -1,0 +1,552 @@
+.wrapper_container{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: rgb(247,247,247);
+    //background-image: url(../images/ai_background.svg);
+}
+
+.wrapper{
+   width: 800px;
+   height: 100vh;
+   display: inline-grid;
+   grid-template-columns: 750px 50px;
+}
+
+*::-webkit-scrollbar{
+    width: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(20,140,150);
+    border: 0px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(230,230,230);
+}
+
+
+.main_box{
+    width: 100%;
+    height: 100%;
+    display: inline-grid;
+    grid-template-rows: 5% 90% 5%;
+}
+
+.diagnosis_container{
+    width: 100%;
+    text-align: center;
+}
+
+.diagnosis_box{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.behavior{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 25% 75%;
+    background-image: linear-gradient(225deg,rgb(20,30,40),rgb(20,140,150));
+}
+
+
+.action{
+    background-color: rgb(240,240,240);
+}
+
+.logo_container{
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.logo{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 2vh;
+    right: 25%;
+    border-radius: 50px;
+    width: 6vh;
+    height: 6vh;
+    background-image: linear-gradient(45deg,rgb(20,30,40),rgb(20,140,150));
+}
+
+.logo img{
+    height: 6vh;
+    border-radius: 50px;
+    padding: 0;
+    margin: 0;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.character_box{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.character_block{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+
+.character_container{
+    height: auto;
+    width: auto;
+    padding: 0px; 
+}
+
+.artificial_assistant{
+    width: 30px;
+    max-width: 50%;
+    min-width: 15px;
+    border-radius: 500px;
+    border: 3px solid rgb(240,240,240);
+    padding: 20px;
+    max-height: 100%;
+    display: inline-block;
+}
+
+
+.footer{
+    font-weight: bold;
+    color: rgb(20,30,40);
+    display: flex;
+    align-items: center;
+}
+
+.footer p{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+
+.body_part{
+    cursor: pointer;
+}
+
+.body_part:hover{
+  cursor: pointer;
+  fill-opacity: 0.5;
+  fill: rgb(240,240,200);
+}
+
+.diagnosis_navigation{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.diagnosis_nav_list{
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.diagnosis_nav_list .step{
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(230,230,230);
+    display: none;
+    cursor: pointer;
+    background-color: rgb(20,180,190);
+}
+
+
+.diagnosis_nav_list .selected_step{
+    color: rgb(230,230,230);
+    background-color: rgb(20,140,150);
+}
+
+input[type='button']{
+    cursor: pointer;
+}
+
+
+.diagnosis_nav_list span{
+    width: 100%;
+    text-align: center;
+}
+
+.diagnosis_nav_list img{
+    width: 80%;
+    max-height: 80%;
+}
+
+
+
+.symptoms_list, .diseases_list, .habits_list, .risk_group_list{
+    display: none;
+    height: 90vh;
+    max-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.symptoms_list, .habits_list, .risk_group_list{
+    grid-template-rows: 95% 5%;
+}
+
+.load_diseases_button, .load_habits_button, .load_risk_group_button{
+    height: 100%;
+    border: 0px;
+    float: right;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(20,140,150);
+}
+
+.part_symptoms, .part_diseases, .part_habits, .part_risk_group{
+    max-height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+
+
+.part_symptoms section, .part_habits section{
+    display: grid;
+    margin-left: 10px;
+    grid-template-columns: 90% 10%;
+}
+
+
+.part_risk_group section{
+    margin-left: 10px;
+}
+
+.part_risk_group ul{
+    list-style-type: none;
+    text-align: left;
+    color: rgb(80,80,80);
+    padding-left: 10px;
+}
+
+
+.part_diseases summary{
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    color: rgb(20,140,150);
+}
+
+.part_diseases section{
+    margin-left: 10px;
+    text-align: left;
+    width: 90%;
+    display: inline-block;
+}
+
+.disease_details p{
+    font-size: 17px;
+}
+
+.disease_details{
+    text-align: left;
+    font-size: 15px;
+    margin-left: 30px;
+    color: rgb(80,80,80);
+    padding-left: 20px;
+    border-left: 1px solid rgb(100,100,100);
+    padding-right: 20px;
+}
+
+
+.disease_details ul{
+    padding-left: 20px;
+}
+
+.part_symptoms section>p, .part_diseases section>p, .part_habits section>p, .part_risk_group section>p{
+    width: 100%;
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 20px;
+    align-items: center;
+    color: rgb(100,100,100);
+    text-align: left;
+}
+
+.woman_body_structure{
+    display: none;
+}
+
+.precision{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 0;
+    padding: 0;
+}
+
+.precision p{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    text-align: center;
+    color: rgb(73,176,226);
+}
+
+.precision input[type="range"] {
+    width: 100%;
+    height: 5px;
+}
+
+.precision input[type="range"]:disabled {
+  background-color: rgb(73,176,226) !important;
+  color: red !important;
+}
+
+
+.human_body .selected_body_part{
+    fill-opacity: 0.3 !important;
+    fill: red !important;
+}
+
+.human_body{
+    display: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.human_body svg{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.body_structure{
+    width: auto;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.personal_info{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.user_photo{
+    width: 25%;
+    display: inline-block;
+}
+
+.personal_info_container{
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.personal_info_container form{
+    width: 65%;
+    display: inline-block; 
+}
+
+.personal_info input, select{
+    width: 100%;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    font-size: 16px;
+    border: 0;
+    overflow: hidden;
+    display: inline-block;
+    border-bottom: 1px solid rgb(100,100,100);
+    color: rgb(50,50,50);
+}
+
+.personal_info input:focus, select:focus{
+    border-color: rgb(230,230,230);
+    border-style: solid;
+    border-width: 1px;
+    outline: none; 
+}
+
+.personal_info_container input, .personal_info_container select{
+    text-align: center;
+    background-color: rgb(240,240,240);
+}
+
+.age_and_gender{
+    display: grid;
+    grid-gap: 6%;
+    grid-template-columns: 40% 54%; 
+}
+
+
+.height_and_weight{
+    display: grid;
+    grid-gap: 6%;
+    grid-template-columns: 54% 40%; 
+}
+
+.personal_info_container input[type='submit']{
+    background-color: rgb(20,140,150);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.loaderContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    display: none;
+    align-items: center;
+    background-color: rgba(240,240,240,0.5);
+    z-index: 1000;
+}
+
+.loaderSection{
+    text-align: center;
+    width: 100%;
+}
+
+.loaderSection img{
+    width: 64px;
+    border-radius: 0.3em;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; } 
+}
+
+
+
+@media screen and (max-device-width: 768px){
+    .logo_container{
+        width: 100%;
+        top: 0px;
+        left: 0px;
+    }
+    
+    .footer{
+        display: none;
+    }
+    
+    .logo{
+        top: 12px;
+    }
+
+    .main_box{
+        height: 100vh;
+        width: 100vw;
+        grid-template-rows: 5% 95%;
+        overflow: hidden;
+    }
+    
+    .wrapper_container{
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .wrapper{
+        width: 100vw;
+        height: 100vh;
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 93% 7%;
+    }
+    
+    .diagnosis_box{
+        border: 0;
+        border-radius: 0;
+        margin: 0;
+    }
+    
+    
+    .behavior{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0% 93%;
+    }
+    
+    
+    .character_box>div{
+        display: none;
+    }
+    
+    .diagnosis_container{
+        overflow: hidden;
+        width: 100vw;
+    }
+    
+    
+    .diagnosis_navigation{
+        display: block;
+        overflow: hidden;
+    }
+    
+    .diagnosis_nav_list{
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 16.5% 16.5% 16% 16% 16.5% 16.5%;
+        grid-gap: 1px;
+        background-color: rgb(240,240,240);
+    }
+    
+    .diagnosis_nav_list .step{
+        height: 100%;
+        border-right: 1px solid rgb(230,230,230);
+        border-bottom: 0;
+    }
+    
+    .disease_details{
+        margin-left: 20px;
+    }
+    
+    .personal_info_container form{
+        width: 80%;
+    }
+    
+    .logo{
+        right: 0;
+    }
+    
+    .user_photo{
+        width: 30%;
+    }
+}

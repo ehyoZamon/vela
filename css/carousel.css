@@ -1,0 +1,58 @@
+.tech-carousel {
+  padding: 3rem 1rem;
+  background-color: var(--bg-color-light);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.tech-carousel h2 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item img {
+  max-width: 80px;
+  max-height: 80px;
+  filter: grayscale(30%);
+  transition: filter 0.3s ease;
+}
+
+.carousel-item img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.carousel {
+  display: flex;
+  gap: 2rem;
+  /* ширина одного набора * 2 (10 элементов по 100px + gaps) */
+  animation: scroll-left 3s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50%));
+  }
+}
+/* Для плавного зацикливания лучше продублировать элементы */

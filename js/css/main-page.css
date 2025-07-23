@@ -1,0 +1,350 @@
+.top_publications{
+    display: grid;
+    grid-template-columns: auto 450px;
+    grid-gap: 50px;
+    margin-bottom: 30px;
+}
+
+.top_article{
+    height: 500px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px; 
+}
+
+.publications{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+}
+
+.top_a_href{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    height: 100%; /* Set to 100% to fill the entire container */
+    width: 100%;
+    margin: 0 auto; /* Center the element horizontally */
+    text-decoration: none;
+    color: rgb(20,30,40);
+}
+
+
+.top_a_href div{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.top_a_href h3{
+    background-color: rgb(247,247,247);
+    margin: 0;
+    padding: 20px;
+    text-align: left;
+    font-size: 24px;
+}
+
+
+.first_article{
+    display: inline-block;
+    padding: 20px;
+}
+
+.first_article h3{ 
+    border-radius: 5px;
+}
+
+.top_2_articles{
+    display: grid;
+    grid-template-columns: 33.3% 33.4% 33.3%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.top_2_articles a{
+    display: grid;
+    grid-template-columns: 145px auto;
+    text-decoration: none;
+    color: rgb(20,30,40);
+}
+
+.top_2_articles h3{
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 20px;
+}
+
+.top_2_articles img{
+    width: 100%;
+}
+
+.top_2_articles .text_wrap{
+    display: flex;
+    align-items: center;
+}
+
+.healthy_life{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.healthy_life_block{
+    width: 100%; 
+    display: grid;
+    grid-template-columns: 18.4% 18.4% 18.4% 18.4% 18.4%;
+    grid-gap: 2%;
+}
+
+.healthy_life_article{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    width: 100%;
+    height: 250px; /* Set to 100% to fill the entire container */
+    margin: 0 auto; /* Center the element horizontally */
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.healthy_life_article div{
+    width: 100%; 
+    text-align: center;
+    height: 40%;
+    background-color: rgb(20 30 40 / 40%);
+    backdrop-filter: blur(1px);
+    display: flex;
+    align-items: center;
+}
+
+.healthy_life_article h3{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px rgb(39,68,86);
+    width: 100%;
+}
+
+.conditions_container, .medicines_container{
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 60px;
+}
+
+.conditions, .medicines{
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.conditions{
+    background-color: rgb(237,240,255);
+}
+
+.conditions_block{
+    width: 96%;
+    text-align: left;
+    display: inline-grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-gap: 2%;
+}
+
+.medicines_block{
+    width: 100%;
+    text-align: left;
+    display: inline-grid;
+    grid-template-columns: 17% 17% 17% 17% 17%;
+    grid-gap: 3.75%;
+}
+
+
+.condition, .medicine{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.condition{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.conditions_block1 .condition{
+    border-bottom: 1px solid rgba(20,30,40,0.3);
+}
+
+.condition a, .medicine{
+    color: rgb(20,30,40);
+    text-decoration: none;
+} 
+
+.condition font{
+    color: rgb(20,140,150);
+    font-weight: bold;
+}
+
+
+.conditions_grid, .medicines_grid{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.medicine img{
+    width: 100%;
+    border-radius: 300px;
+}
+
+.medicine figure{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.medicine figcaption{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+}
+
+.healthy_life::-webkit-scrollbar {
+  display: none;
+}
+
+.conditions_container::-webkit-scrollbar{
+    display: none;
+}
+
+.medicines_container::-webkit-scrollbar{
+    display: none;
+}
+@media screen and (max-device-width: 1024px) {
+    .top_2_articles a{
+        grid-template-columns: 100%;
+        grid-gap: 5px;
+    }
+    
+    .top_2_articles .text_wrap{
+        align-items: start;
+        padding: 0;
+    }
+    
+    .top_2_articles{
+        grid-template-columns: 30% 30% 30%;
+        grid-gap: 5%;
+    }
+    .healthy_life_article{
+        height: 25vw;
+    }
+}
+
+@media screen and (max-device-width: 968px) {
+    .top_publications{
+        grid-template-columns: 100%;
+    }
+    
+    
+    .healthy_life{
+        overflow-x: scroll;
+    }
+    
+    .healthy_life_block{
+        width: 968px; 
+        display: grid;
+        grid-template-columns: 18.4% 18.4% 18.4% 18.4% 18.4%;
+        grid-gap: 2%;
+    }
+    
+    .healthy_life_article{
+        height: 250px;
+    }
+    
+    .healthy_life_article h3{
+        font-size: 20px;
+        line-height: 26px;
+    }    
+    
+    .conditions, .medicines{
+        width: 1024px;
+    }
+    
+    .conditions_container, .medicines_container{
+        overflow-x: scroll;
+    } 
+    
+    
+}
+
+
+@media screen and (max-device-width: 768px) {
+    .publications h2{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .publications{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .top_article{
+        border-radius: 0px;
+    }
+    
+    
+    .top_2_articles{
+        grid-template-columns: 100%;
+        grid-gap: 20px;
+    }
+    
+    .top_2_articles a{
+        grid-template-columns: 30% auto;
+        grid-gap: 10px;
+    }
+    
+    .top_2_articles .text_wrap{
+        align-items: center;
+    }
+    
+    
+    .top_2_articles h3{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    
+    .top_2_articles{
+        padding: 20px;
+    }
+    
+    .healthy_life_container{
+        padding: 20px;
+    }
+    
+    .conditions_grid, .medicines_grid{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-device-width: 500px) {
+    .top_2_articles a{
+        grid-template-columns: 40% auto;
+    }
+    
+    .top_2_articles h3{
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

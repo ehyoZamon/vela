@@ -1,0 +1,247 @@
+.diagnosis_container{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.diagnosis_list{
+    text-align: left;
+}
+
+.diagnosis_container h1{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    color: rgb(39,68,86);
+}
+
+h4{
+    font-size: 22px;
+    line-height: 28px;
+    color: rgb(39,68,86);
+} 
+
+.human_body{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    max-height: 90vh;
+}
+
+.body_structure{
+    width: 100%;
+    max-width: 100%;
+}
+
+.body_part{
+    cursor: pointer;
+}
+
+.body_part:hover{
+  cursor: pointer;
+  fill-opacity: 0.3;
+  fill: rgb(240,240,200);
+}
+
+.loaderContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    display: none;
+    align-items: center;
+    background-color: rgba(240,240,240,0.5);
+    z-index: 1000;
+}
+
+.loaderSection{
+    text-align: center;
+    width: 100%;
+}
+
+.loaderSection img{
+    width: 64px;
+    border-radius: 0.3em;
+}
+
+.human_body .selected_body_part{
+    fill-opacity: 0.3 !important;
+    fill: rgb(43,76,226) !important;
+}
+
+
+.symptoms_list, .diseases_list, .articles_list{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.part_symptoms, .part_diseases, .part_articles{
+    max-height: 70vh;
+    height: 70vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.part_symptoms section{
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
+.part_symptoms section>p, .part_diseases section>p, .part_articles p{
+    width: 100%;
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 20px;
+    align-items: center;
+    color: rgb(100,100,100);
+}
+
+
+.precision{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 0;
+    padding: 0;
+}
+
+.precision p{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    text-align: center;
+    color: rgb(73,176,226);
+}
+
+.precision input[type="range"] {
+    width: 100%;
+    height: 5px;
+}
+
+.precision input[type="range"]:disabled {
+  background-color: rgb(73,176,226) !important;
+  color: red !important;
+}
+
+.diseases_list input[type='range']{
+    width: 100%;
+}
+
+.part_diseases section{
+    cursor: pointer;
+}
+
+.load_diseases_button{
+    background-color: rgb(20,140,150);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.load_diseases_button:focus{
+    border-color: rgb(247,247,247);
+    border-style: solid;
+    border-width: 1px;
+    outline: none; 
+}
+
+.publish_time{
+    display: flex;
+    align-items: center;
+}
+
+.publish_time img{
+    margin: 10px;
+}
+
+.diagnosis_steps{
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.step{
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    border: 1px solid rgb(39,68,86);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.step span{
+    margin: 0;
+    padding: 0;
+}
+
+
+.diagnosis_steps li span{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.selected_step{
+    color: rgb(247,247,247);
+    background-color: rgb(39,68,86);
+}
+
+
+@media screen and (max-device-width: 960px){
+    .human_body{
+        grid-template-columns: 100%;
+        max-height: none;
+    }
+    
+    .diagnosis_list{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .symptoms_list{
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    .part_symptoms, .part_diseases{
+        max-height: 80vh;
+        height: auto;
+    }
+    
+    .part_articles{
+        height: auto;
+        max-height: none;
+    }
+    
+    .step{
+        padding: 5px;
+        width: 20px;
+        height: 20px;
+    }
+    }
+}

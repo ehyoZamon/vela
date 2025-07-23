@@ -1,0 +1,98 @@
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto 0;
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  transition: border 0.3s ease;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+#form-status {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Сообщения статуса */
+.success {
+  color: #28a745;
+}
+
+.error {
+  color: #dc3545;
+}
+
+/* Стилизация select */
+.form-group select {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  appearance: none; /* Убираем стандартный стиль */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300bfa6'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* Стили для placeholder */
+.form-group select option[value=""][disabled] {
+  color: #999;
+}
+
+/* Темная/светлая тема */
+body.light-theme .form-group select {
+  background-color: white;
+  border-color: #e0e0e0;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  .form-group select {
+    padding: 12px;
+    background-position: right 10px center;
+  }
+}

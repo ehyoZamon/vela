@@ -1,0 +1,67 @@
+.about_us_container h1{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.about_us_container p{
+    line-height: 26px;
+    font-size: 16px;
+}
+
+.about_us_container li{
+    line-height: 26px;
+    font-size: 16px;
+    margin-top: 14px;
+}
+
+.about_us_container{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 60px;
+    word-wrap: break-word;
+}
+
+.about_us_info{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 47.5% 47.5%;
+    grid-gap: 5%;
+}
+
+.about_us_info h2{
+    text-align: center;
+}
+
+.about_us_image, .about_us_text{
+    display: flex;
+    align-items: center;
+}
+
+.about_us_image, .about_us_text_wrap{
+    text-align: center;
+}
+
+.team_image, .about_us_text_content{
+    width: 100%;
+    max-width: 800px;
+    display: inline-block;
+    text-align: left;
+}
+
+@media screen and (max-device-width: 768px){
+    .about_us_info{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-device-width: 600px) {
+    .about_us_container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+
